@@ -1,0 +1,32 @@
+:root {
+    /* Definindo variáveis de cores */
+    --primary-color: #d1b4a2;
+    --secondary-color: #92394b;
+    --background-color: #352640;
+    --text-color: #f1f2ce;
+}
+
+/* Estilo geral para o cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between; /* Coloca os itens nas extremidades */
+    align-items: center;
+    padding: 10px; /* Ajusta o espaçamento */
+}
+
+/* Estilo para a imagem na versão mobile */
+.logo__cabecalho {
+    max-width: 150px; /* Limita o tamanho da imagem no mobile */
+}
+
+/* Media query para telas menores (mobile) */
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: row; /* Garante que o layout fique na horizontal */
+        background-color:var(--background-color);
+    }
+
+    .logo__cabecalho {
+        margin-left: auto; /* Empurra a imagem para o lado direito */
+    }
+}
