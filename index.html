@@ -6,31 +6,120 @@
     <title>Cardapio</title>
     <link rel="stylesheet" href="style-menu.css" >
     <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="cabecalho"> 
-            <div id="menu">
-                <div id="menu-bar" onclick="menuOnClick()">
-                <div id="bar1" class="bar"></div>
-                <div id="bar2" class="bar"></div>
-                <div id="bar3" class="bar"></div>
-                </div>
+        <header class="cabecalho"> 
+                <div id="menu">
+                    <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                 </div>
+
                 <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-                </nav> 
-            </div>
-            
-            <div class="menu-bg" id="menu-bg"></div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                 </nav> 
+                </div>
+                
+                <div class="menu-bg" id="menu-bg"></div>
 
-            <a href="" class="logo__cabecalho"><img src="./img/logo.png" alt="logo da empresa imagem de um açai na tigela" class="logo__cabecalho"></a>
+                <a href="" class="logo__cabecalho"><img src="./img/logo.png" alt="logo da empresa imagem de um açai na tigela" class="logo__cabecalho"></a>
 
-    </header>
+        </header>
+
+                <main class="prato-dia">
+                    <section class="descricao-prato">
+                        <h2>Prato do Dia</h2>
+                        <p class="texto__prato-dia">Hoje temos uma deliciosa opção para você!</p>
+                        <div class="prato-info">
+                            <h3>Frango com molho de laranja</h3>
+                            <p>Frango grelhado servido com molho de laranja fresco, acompanhado de arroz e legumes.</p>
+                        </div>
+                        <button class="btn-pedido">Fazer Pedido</button>
+                    </section>
+                    <section class="imagem-prato">
+                        <img src="./img/frango-laranja-.png" alt="Imagem do prato do dia">
+                    </section>
+                </main>
+
+               <!-- Seção Menu dentro de uma nova section -->
+                <section class="menu-secao">
+                    <h2 class="menu-titulo">Nosso Menu</h2>
+
+                    <!-- Categoria 1: Entradas -->
+                    <div class="categoria">
+                        <h3 class="categoria-titulo">Entradas</h3>
+                        <div class="pratos-container">
+                            <article class="prato-item">
+                                <img src="./img/acai.png" alt="Imagem do prato 1" class="prato-img">
+                                <h4 class="prato-nome">Açai na tigela</h4>
+                                <p class="prato-descricao">Pão torrado com tomates frescos, manjericão e azeite.</p>
+                            </article>
+                            
+                            <article class="prato-item">
+                                <img src="./img/batata-frita.png" alt="Imagem do prato 2" class="prato-img">
+                                <h4 class="prato-nome">Salada Caprese</h4>
+                                <p class="prato-descricao">Tomate, mussarela de búfala e molho pesto.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 2: Pratos Principais -->
+                    <div class="categoria">
+                        <h3 class="categoria-titulo">Pratos Principais</h3>
+                        <div class="pratos-container">
+                            <article class="prato-item">
+                                <img src="./img/strognof.png" alt="Imagem do prato 3" class="prato-img">
+                                <h4 class="prato-nome">Frango com Molho de Laranja</h4>
+                                <p class="prato-descricao">Frango grelhado servido com molho de laranja fresco, arroz e legumes.</p>
+                            </article>
+                            
+                            <article class="prato-item">
+                                <img src="./img/feijoada.png" alt="Imagem do prato 4" class="prato-img">
+                                <h4 class="prato-nome">Risoto de Cogumelos</h4>
+                                <p class="prato-descricao">Risoto cremoso com cogumelos frescos e parmesão.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                    <footer class="footer">
+                            <div class="footer-container">
+                                
+                                <!-- Redes sociais -->
+                                <div class="footer-redes-sociais">
+                                    <h4>Nos siga nas redes sociais:</h4>
+                                    <a href="https://www.instagram.com/sualanchonete" target="_blank">
+                                        <img src="./img/instagram.png" alt="Logo do Instagram" class="social-icon">
+                                    </a>
+                                </div>
+                        
+                                <!-- Informações de contato -->
+                                <div class="footer-contato">
+                                    <h4>Contato</h4>
+                                    <p>Telefone: (11) 1234-5678</p>
+                                    <p>Email: contato@sualanchonete.com</p>
+                                    <p>Endereço: Rua dos Lanches, 123, São Paulo - SP</p>
+                                </div>
+                        
+                                <!-- Horário de funcionamento -->
+                                <div class="footer-horario">
+                                    <h4>Horário de Funcionamento</h4>
+                                    <p>Segunda a Sexta: 10h - 22h</p>
+                                    <p>Sábado e Domingo: 12h - 00h</p>
+                                </div>
+                            </div>
+                        </footer>
+                    
 
     <script src="menu.js"></script>
     

@@ -19,6 +19,157 @@
     max-width: 150px; /* Limita o tamanho da imagem no mobile */
 }
 
+.prato-dia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.descricao-prato {
+    margin-bottom: 20px;
+}
+
+.prato-info h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.prato-info p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.btn-pedido {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.imagem-prato img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Estilos Gerais */
+.menu-secao {
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+.menu-titulo {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* Estilo das Categorias */
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria-titulo {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Container de Pratos */
+.pratos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos Pratos */
+.prato-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+
+.prato-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.prato-nome {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.prato-descricao {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+/* Estilos Gerais do Footer */
+.footer {
+    background-color: #333;
+    color: #f1f2ce; /* Cor de texto clara */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Para garantir que fique responsivo */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seções do Footer */
+.footer-redes-sociais,
+.footer-contato,
+.footer-horario {
+    margin-bottom: 20px;
+}
+
+/* Títulos das seções */
+.footer h4 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo das Informações */
+.footer p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Estilo da imagem e link do Instagram */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efeito de zoom no hover */
+}
+
+
 /* Media query para telas menores (mobile) */
 @media (max-width: 600px) {
     .cabecalho {
@@ -29,4 +180,47 @@
     .logo__cabecalho {
         margin-left: auto; /* Empurra a imagem para o lado direito */
     }
+    .principal{
+        background-color: var(--background-color);
+    }
+     h2 {
+        font-family: 'Kanit', sans-serif;
+        color: var(--text-color) ;
+    } 
+    .prato-dia {
+        background-color: var(--background-color);
+        flex-direction: column;
+    }
+
+    .texto__prato-dia{
+        
+            font-family: 'Kanit', sans-serif;
+            color: var(--text-color);
+    }
+
+    .imagem-prato {
+        margin-top: 20px;
+    }
+    .pratos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prato-item {
+        width: 100%;
+    }
+    .footer{
+        background-color: var(--secondary-color);
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-redes-sociais,
+    .footer-contato,
+    .footer-horario {
+        margin-bottom: 15px;
+    }
+
 }
