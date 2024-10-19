@@ -169,6 +169,28 @@
     transform: scale(1.2); /* Efeito de zoom no hover */
 }
 
+#carrinho {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#itens-carrinho {
+    margin-bottom: 15px;
+}
+
+#carrinho button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+
 
 /* Media query para telas menores (mobile) */
 @media (max-width: 600px) {
@@ -221,6 +243,29 @@
     .footer-contato,
     .footer-horario {
         margin-bottom: 15px;
+    }
+    .carrinho-fixo {
+        position: static; /* Torna o carrinho não-fixo no mobile */
+        width: 100%; /* O carrinho ocupa toda a largura da tela */
+        margin: 0 auto; /* Centraliza o carrinho */
+        box-shadow: none; /* Remove a sombra */
+    }
+
+    #itens-carrinho {
+        max-height: 150px; /* Ajusta a altura máxima para mobile */
+    }
+
+    #carrinho button {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    #carrinho h2 {
+        font-size: 1.2rem;
+    }
+
+    .prato-dia {
+        flex-direction: column; /* Garante que o conteúdo fique em coluna no mobile */
     }
 
 }

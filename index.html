@@ -33,6 +33,13 @@
                 <div class="menu-bg" id="menu-bg"></div>
 
                 <a href="" class="logo__cabecalho"><img src="./img/logo.png" alt="logo da empresa imagem de um açai na tigela" class="logo__cabecalho"></a>
+                <section id="carrinho" class="carrinho-fixo">
+                    <h2>Carrinho de Compras</h2>
+                    <div id="itens-carrinho"></div>
+                    <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+                    <button onclick="finalizarCompra()">Finalizar Compra</button>
+                </section>
+                
 
         </header>
 
@@ -63,12 +70,16 @@
                                 <img src="./img/acai.png" alt="Imagem do prato 1" class="prato-img">
                                 <h4 class="prato-nome">Açai na tigela</h4>
                                 <p class="prato-descricao">Pão torrado com tomates frescos, manjericão e azeite.</p>
+                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
+
                             </article>
                             
                             <article class="prato-item">
                                 <img src="./img/batata-frita.png" alt="Imagem do prato 2" class="prato-img">
                                 <h4 class="prato-nome">Salada Caprese</h4>
                                 <p class="prato-descricao">Tomate, mussarela de búfala e molho pesto.</p>
+                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
+
                             </article>
                         </div>
                     </div>
@@ -81,12 +92,16 @@
                                 <img src="./img/strognof.png" alt="Imagem do prato 3" class="prato-img">
                                 <h4 class="prato-nome">Frango com Molho de Laranja</h4>
                                 <p class="prato-descricao">Frango grelhado servido com molho de laranja fresco, arroz e legumes.</p>
+                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
+
                             </article>
                             
                             <article class="prato-item">
                                 <img src="./img/feijoada.png" alt="Imagem do prato 4" class="prato-img">
                                 <h4 class="prato-nome">Risoto de Cogumelos</h4>
                                 <p class="prato-descricao">Risoto cremoso com cogumelos frescos e parmesão.</p>
+                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Risoto', 14.56)">Adicionar ao Carrinho</button>
+
                             </article>
                         </div>
                     </div>
@@ -118,10 +133,17 @@
                                     <p>Sábado e Domingo: 12h - 00h</p>
                                 </div>
                             </div>
+
+                                
+                            
+
+
+
                         </footer>
                     
 
     <script src="menu.js"></script>
+    <script src="carrinho.js"></script>
     
 </body>
 </html>
