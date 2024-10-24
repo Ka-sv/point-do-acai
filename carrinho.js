@@ -38,3 +38,24 @@ function finalizarCompra() {
         alert('O carrinho está vazio!');
     }
 }
+
+// Função para mostrar ou esconder o carrinho
+function toggleCarrinho() {
+    const carrinhoDiv = document.getElementById('carrinho');
+    if (carrinhoDiv.style.display === 'none') {
+        carrinhoDiv.style.display = 'block';
+        // Adicionar evento para fechar com 'ESC'
+        document.addEventListener('keydown', fecharComEsc);
+    } else {
+        carrinhoDiv.style.display = 'none';
+        // Remover evento quando o carrinho estiver fechado
+        document.removeEventListener('keydown', fecharComEsc);
+    }
+}
+
+// Função para fechar o carrinho com a tecla 'ESC'
+function fecharComEsc(event) {
+    if (event.key === 'Escape') {
+        toggleCarrinho();
+    }
+}

@@ -33,12 +33,20 @@
                 <div class="menu-bg" id="menu-bg"></div>
 
                 <a href="" class="logo__cabecalho"><img src="./img/logo.png" alt="logo da empresa imagem de um açai na tigela" class="logo__cabecalho"></a>
-                <section id="carrinho" class="carrinho-fixo">
-                    <h2>Carrinho de Compras</h2>
+               
+                <a href="javascript:void(0);" class="logo__cabecalho" onclick="toggleCarrinho()">
+                    <img src="./img/carrinho-de-compras.png" alt="logo da empresa imagem de um açai na tigela" class="logo__cabecalho">
+                </a>
+                
+                <div id="carrinho" class="carrinho-fixo" style="display: none;">
+                    <button id="fechar-carrinho" onclick="toggleCarrinho()">Fechar</button>
+                    <h2>Itens no Carrinho</h2>
                     <div id="itens-carrinho"></div>
                     <p>Total: R$ <span id="total-carrinho">0.00</span></p>
                     <button onclick="finalizarCompra()">Finalizar Compra</button>
-                </section>
+                </div>
+                
+                
                 
 
         </header>
@@ -113,7 +121,7 @@
                                 <!-- Redes sociais -->
                                 <div class="footer-redes-sociais">
                                     <h4>Nos siga nas redes sociais:</h4>
-                                    <a href="https://www.instagram.com/sualanchonete" target="_blank">
+                                    <a href="https://www.instagram.com/point_doacai31/" target="_blank">
                                         <img src="./img/instagram.png" alt="Logo do Instagram" class="social-icon">
                                     </a>
                                 </div>
