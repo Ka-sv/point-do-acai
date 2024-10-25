@@ -9,16 +9,20 @@
 /* Estilo geral para o cabeçalho */
 .cabecalho {
     display: flex;
-    justify-content: space-between; /* Coloca os itens nas extremidades */
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
     align-items: center;
-    padding: 10px; /* Ajusta o espaçamento */
+    padding: 10px;
 }
 
-/* Estilo para a imagem na versão mobile */
+/* Estilo para o logo e o ícone do carrinho */
 .logo__cabecalho {
-    max-width: 150px; /* Limita o tamanho da imagem no mobile */
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre o logo e o carrinho */
+    max-width: 150px;
 }
 
+/* Estilo para o botão de fechar carrinho */
 #fechar-carrinho {
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -214,6 +218,28 @@
 
 /* Media query para telas menores (mobile) */
 @media (max-width: 600px) {
+    
+    .cabecalho {
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .logo__cabecalho img {
+        max-width: 80px;
+    }
+    #fechar-carrinho {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+    .logo__cabecalho img {
+        max-width: 80px;
+    }
+    .carrinho-fixo {
+        width: 100%;
+        bottom: 0;
+        top: auto;
+        padding: 15px;
+    }
     .cabecalho {
         flex-direction: row; /* Garante que o layout fique na horizontal */
         background-color:var(--background-color);
@@ -289,3 +315,5 @@
     }
 
 }
+
+

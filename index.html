@@ -1,118 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardapio</title>
-    <link rel="stylesheet" href="style-menu.css" >
-    <link rel="stylesheet" href="style.css" >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardapio</title>
+        <link rel="stylesheet" href="style-menu.css" >
+        <link rel="stylesheet" href="style.css" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-        <header class="cabecalho"> 
-                <div id="menu">
-                    <div id="menu-bar" onclick="menuOnClick()">
-                    <div id="bar1" class="bar"></div>
-                    <div id="bar2" class="bar"></div>
-                    <div id="bar3" class="bar"></div>
-                 </div>
-
-                <nav class="nav" id="nav">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                 </nav> 
-                </div>
-                
-                <div class="menu-bg" id="menu-bg"></div>
-
-                <a href="" class="logo__cabecalho"><img src="./img/logo.png" alt="logo da empresa imagem de um açai na tigela" class="logo__cabecalho"></a>
-               
-                <a href="javascript:void(0);" class="logo__cabecalho" onclick="toggleCarrinho()">
-                    <img src="./img/carrinho-de-compras.png" alt="logo da empresa imagem de um açai na tigela" class="logo__cabecalho">
-                </a>
-                
-                <div id="carrinho" class="carrinho-fixo" style="display: none;">
-                    <button id="fechar-carrinho" onclick="toggleCarrinho()">Fechar</button>
-                    <h2>Itens no Carrinho</h2>
-                    <div id="itens-carrinho"></div>
-                    <p>Total: R$ <span id="total-carrinho">0.00</span></p>
-                    <button onclick="finalizarCompra()">Finalizar Compra</button>
-                </div>
-                
-                
-                
-
+        <header class="cabecalho">
+                                <div id="menu">
+                                    <div id="menu-bar" onclick="menuOnClick()">
+                                        <div id="bar1" class="bar"></div>
+                                        <div id="bar2" class="bar"></div>
+                                        <div id="bar3" class="bar"></div>
+                                    </div>
+                            
+                                    <nav class="nav" id="nav">
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            
+                                <div class="menu-bg" id="menu-bg"></div>
+                            
+                                <!-- Logo e ícone do carrinho -->
+                                <a href="#" class="logo__cabecalho">
+                                    <img src="./img/logo.png" alt="Logo da empresa" class="logo__cabecalho">
+                                </a>
+                                <a href="javascript:void(0);" class="logo__cabecalho" onclick="toggleCarrinho()">
+                                    <img src="./img/carrinho-de-compras.png" alt="Carrinho de compras" class="logo__cabecalho">
+                                </a>
+                            
+                                <div id="carrinho" class="carrinho-fixo" style="display: none;">
+                                    <button id="fechar-carrinho" onclick="toggleCarrinho()">Fechar</button>
+                                    <h2>Itens no Carrinho</h2>
+                                    <div id="itens-carrinho"></div>
+                                    <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+                                    <button onclick="finalizarCompra()">Finalizar Compra</button>
+                                </div>
         </header>
-
-                <main class="prato-dia">
-                    <section class="descricao-prato">
-                        <h2>Prato do Dia</h2>
-                        <p class="texto__prato-dia">Hoje temos uma deliciosa opção para você!</p>
-                        <div class="prato-info">
-                            <h3>Frango com molho de laranja</h3>
-                            <p>Frango grelhado servido com molho de laranja fresco, acompanhado de arroz e legumes.</p>
-                        </div>
-                        
-                    </section>
-                    <section class="imagem-prato">
-                        <img src="./img/frango-laranja-.png" alt="Imagem do prato do dia">
-                    </section>
+    
+    <main class="prato-dia">
+                            <section class="descricao-prato">
+                                <h2>Prato do Dia</h2>
+                                <p class="texto__prato-dia">Hoje temos uma deliciosa opção para você!</p>
+                                <div class="prato-info">
+                                    <h3>Frango com molho de laranja</h3>
+                                    <p>Frango grelhado servido com molho de laranja fresco, acompanhado de arroz e legumes.</p>
+                                </div>
+                                
+                            </section>
+                            <section class="imagem-prato">
+                                <img src="./img/frango-laranja-.png" alt="Imagem do prato do dia">
+                            </section>
                 </main>
 
-               <!-- Seção Menu dentro de uma nova section -->
-                <section class="menu-secao">
-                    <h2 class="menu-titulo">Nosso Menu</h2>
+               <!-- Seção Menu  section -->
+              <section class="menu-secao">
+                            <h2 class="menu-titulo">Nosso Menu</h2>
 
-                    <!-- Categoria 1: Entradas -->
-                    <div class="categoria">
-                        <h3 class="categoria-titulo">Entradas</h3>
-                        <div class="pratos-container">
-                            <article class="prato-item">
-                                <img src="./img/acai.png" alt="Imagem do prato 1" class="prato-img">
-                                <h4 class="prato-nome">Açai na tigela</h4>
-                                <p class="prato-descricao">Pão torrado com tomates frescos, manjericão e azeite.</p>
-                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
+                            <!-- Categoria 1: Entradas -->
+                            <div class="categoria">
+                                <h3 class="categoria-titulo">Entradas</h3>
+                                <div class="pratos-container">
+                                    <article class="prato-item">
+                                        <img src="./img/acai.png" alt="Imagem do prato 1" class="prato-img">
+                                        <h4 class="prato-nome">Açai na tigela</h4>
+                                        <p class="prato-descricao">Pão torrado com tomates frescos, manjericão e azeite.</p>
+                                        <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
 
-                            </article>
-                            
-                            <article class="prato-item">
-                                <img src="./img/batata-frita.png" alt="Imagem do prato 2" class="prato-img">
-                                <h4 class="prato-nome">Salada Caprese</h4>
-                                <p class="prato-descricao">Tomate, mussarela de búfala e molho pesto.</p>
-                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
+                                    </article>
+                                    
+                                    <article class="prato-item">
+                                        <img src="./img/batata-frita.png" alt="Imagem do prato 2" class="prato-img">
+                                        <h4 class="prato-nome">Salada Caprese</h4>
+                                        <p class="prato-descricao">Tomate, mussarela de búfala e molho pesto.</p>
+                                        <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
 
-                            </article>
-                        </div>
-                    </div>
+                                    </article>
+                                </div>
+                            </div>
 
-                    <!-- Categoria 2: Pratos Principais -->
-                    <div class="categoria">
-                        <h3 class="categoria-titulo">Pratos Principais</h3>
-                        <div class="pratos-container">
-                            <article class="prato-item">
-                                <img src="./img/strognof.png" alt="Imagem do prato 3" class="prato-img">
-                                <h4 class="prato-nome">Frango com Molho de Laranja</h4>
-                                <p class="prato-descricao">Frango grelhado servido com molho de laranja fresco, arroz e legumes.</p>
-                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
+                            <!-- Categoria 2: Pratos Principais -->
+                            <div class="categoria">
+                                <h3 class="categoria-titulo">Pratos Principais</h3>
+                                <div class="pratos-container">
+                                    <article class="prato-item">
+                                        <img src="./img/strognof.png" alt="Imagem do prato 3" class="prato-img">
+                                        <h4 class="prato-nome">Frango com Molho de Laranja</h4>
+                                        <p class="prato-descricao">Frango grelhado servido com molho de laranja fresco, arroz e legumes.</p>
+                                        <button class="btn-add-cart" onclick="adicionarAoCarrinho('Açai na Tigela', 12.00)">Adicionar ao Carrinho</button>
 
-                            </article>
-                            
-                            <article class="prato-item">
-                                <img src="./img/feijoada.png" alt="Imagem do prato 4" class="prato-img">
-                                <h4 class="prato-nome">Risoto de Cogumelos</h4>
-                                <p class="prato-descricao">Risoto cremoso com cogumelos frescos e parmesão.</p>
-                                <button class="btn-add-cart" onclick="adicionarAoCarrinho('Risoto', 14.56)">Adicionar ao Carrinho</button>
+                                    </article>
+                                    
+                                    <article class="prato-item">
+                                        <img src="./img/feijoada.png" alt="Imagem do prato 4" class="prato-img">
+                                        <h4 class="prato-nome">Risoto de Cogumelos</h4>
+                                        <p class="prato-descricao">Risoto cremoso com cogumelos frescos e parmesão.</p>
+                                        <button class="btn-add-cart" onclick="adicionarAoCarrinho('Risoto', 14.56)">Adicionar ao Carrinho</button>
 
-                            </article>
-                        </div>
-                    </div>
+                                    </article>
+                                </div>
+                            </div>
                 </section>
 
                     <footer class="footer">
