@@ -193,17 +193,23 @@
     transform: scale(1.2); /* Efeito de zoom no hover */
 }
 
+/* Estilo geral para o carrinho */
 #carrinho {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
+    max-width: 400px;
 }
 
+/* Limite de altura e rolagem para a área dos itens no mobile */
 #itens-carrinho {
+    max-height: 250px; /* Altura máxima para caber na tela */
+    overflow-y: auto; /* Rolagem vertical para muitos itens */
     margin-bottom: 15px;
 }
 
+/* Estilo do botão Fechar e finalizar compra */
 #carrinho button {
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -213,6 +219,7 @@
     border-radius: 5px;
     font-size: 1.1rem;
 }
+
 
 
 
@@ -233,6 +240,20 @@
     }
     .logo__cabecalho img {
         max-width: 80px;
+    }
+    #itens-carrinho {
+        max-height: 150px; /* Ajusta a altura máxima para melhor visualização */
+    }
+    #carrinho {
+        padding: 10px;
+        width: 100%;
+    }
+    #carrinho h2 {
+        font-size: 1.2rem;
+    }
+    #carrinho button {
+        padding: 15px;
+        font-size: 1.2rem;
     }
     .carrinho-fixo {
         width: 100%;
