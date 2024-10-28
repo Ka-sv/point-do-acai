@@ -1,0 +1,45 @@
+{
+    "pratoDoDia": {
+      "nome": "Frango com molho de laranja",
+      "descricao": "Frango grelhado servido com molho de laranja fresco, acompanhado de arroz e legumes.",
+      "imagem": "./img/frango-laranja.png",
+      "mensagem": "Hoje temos uma deliciosa opção para você!"
+    },
+    "menu": [
+      {
+        "categoria": "Entradas",
+        "itens": [
+          {
+            "nome": "Açaí na Tigela",
+            "descricao": "Pão torrado com tomates frescos, manjericão e azeite.",
+            "preco": 12.00,
+            "imagem": "./img/acai.png"
+          },
+          {
+            "nome": "Salada Caprese",
+            "descricao": "Tomate, mussarela de búfala e molho pesto.",
+            "preco": 15.00,
+            "imagem": "./img/strognof.png"
+          }
+        ]
+      },
+      {
+        "categoria": "Pratos Principais",
+        "itens": [
+          {
+            "nome": "Frango com Molho de Laranja",
+            "descricao": "Frango grelhado servido com molho de laranja fresco.",
+            "preco": 25.00,
+            "imagem": "./img/frango-laranja-.png"
+          },
+          {
+            "nome": "Risoto de Cogumelos",
+            "descricao": "Risoto cremoso com cogumelos frescos e parmesão.",
+            "preco": 30.00,
+            "imagem": "./img/feijoada.png"
+          }
+        ]
+      }
+    ]
+  }
+  

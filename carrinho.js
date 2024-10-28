@@ -59,3 +59,46 @@ function fecharComEsc(event) {
         toggleCarrinho();
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    carregarCardapio();
+});
+
+function carregarCardapio() {
+    fetch('menu.json')
+        .then(response => response.json())
+        .then(data => {
+            const menuSecao = document.querySelector('.menu-secao');
+            menuSecao.innerHTML = ""; // Limpa a seção para evitar duplicação
+
+            data.menu.forEach(categoria => {
+                // Adiciona o título da categoria
+                const categoriaDiv = document.createElement('div');
+                categoriaDiv.className = 'categoria';
+                categoriaDiv.innerHTML = `<h3 class="categoria-titulo">${categoria.categoria}</h3>`;
+
+                const pratosContainer = document.createElement('div');
+                pratosContainer.className = 'pratos-container';
+
+                // Adiciona os itens com imagem
+                categoria.itens.forEach(item => {
+                    const pratoItem = document.createElement('article');
+                    pratoItem.className = 'prato-item';
+                    pratoItem.innerHTML = `
+                        <img src="${item.imagem}" alt="${item.nome}" class="prato-img">
+                        <h4 class="prato-nome">${item.nome}</h4>
+                        <p class="prato-descricao">${item.descricao}</p>
+                        <p>R$ ${item.preco.toFixed(2)}</p>
+                        <button class="btn-add-cart" onclick="adicionarAoCarrinho('${item.nome}', ${item.preco})">
+                            Adicionar ao Carrinho
+                        </button>
+                    `;
+                    pratosContainer.appendChild(pratoItem);
+                });
+
+                categoriaDiv.appendChild(pratosContainer);
+                menuSecao.appendChild(categoriaDiv);
+            });
+        })
+        .catch(error => console.error("Erro ao carregar o cardápio:", error));
+}
