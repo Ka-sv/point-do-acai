@@ -19,19 +19,19 @@
                                         <div id="bar2" class="bar"></div>
                                         <div id="bar3" class="bar"></div>
                                     </div>
-                            
+
                                     <nav class="nav" id="nav">
                                         <ul>
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="javascript:void(0);" onclick="rolarParaCardapio()">Conheça nosso cardápio</a></li>
+                                            <li><a href="#">Visite nossas Redes</a></li>
+                                            <li><a href="javascript:void(0);" onclick="rolarParaContato()">Contato</a></li>
+
                                         </ul>
                                     </nav>
                                 </div>
-                            
+
                                 <div class="menu-bg" id="menu-bg"></div>
-                            
+
                                 <!-- Logo e ícone do carrinho -->
                                 <a href="#" class="logo__cabecalho">
                                     <img src="./img/logo.png" alt="Logo da empresa" class="logo__cabecalho">
@@ -39,7 +39,7 @@
                                 <a href="javascript:void(0);" class="logo__cabecalho" onclick="toggleCarrinho()">
                                     <img src="./img/carrinho-de-compras.png" alt="Carrinho de compras" class="logo__cabecalho">
                                 </a>
-                            
+
                                 <div id="carrinho" class="carrinho-fixo" style="display: none;">
                                     <button id="fechar-carrinho" onclick="toggleCarrinho()">Fechar</button>
                                     <h2>Itens no Carrinho</h2>
@@ -48,31 +48,20 @@
                                     <button onclick="finalizarCompra()">Finalizar Compra</button>
                                 </div>
         </header>
-    
-    <main class="prato-dia">
-                            <section class="descricao-prato">
-                                <h2>Prato do Dia</h2>
-                                <p class="texto__prato-dia">Hoje temos uma deliciosa opção para você!</p>
-                                <div class="prato-info">
-                                    <h3>Frango com molho de laranja</h3>
-                                    <p>Frango grelhado servido com molho de laranja fresco, acompanhado de arroz e legumes.</p>
-                                </div>
+
+        <main class="prato-dia">
                                 
-                            </section>
-                            <section class="imagem-prato">
-                                <img src="./img/frango-laranja-.png" alt="Imagem do prato do dia">
-                            </section>
-                </main>
+                                        </main>
 
                <!-- Seção Menu  section -->
-               <section class="menu-secao">
-                <h2 class="menu-titulo">Nosso Menu</h2>
+               <section class="menu-secao" id="cardapio">
+                
             </section>
-            
+
 
                     <footer class="footer">
                             <div class="footer-container">
-                                
+
                                 <!-- Redes sociais -->
                                 <div class="footer-redes-sociais">
                                     <h4>Nos siga nas redes sociais:</h4>
@@ -80,15 +69,15 @@
                                         <img src="./img/instagram.png" alt="Logo do Instagram" class="social-icon">
                                     </a>
                                 </div>
-                        
+
                                 <!-- Informações de contato -->
-                                <div class="footer-contato">
+                                <div class="footer-contato" id="contato">
                                     <h4>Contato</h4>
                                     <p>Telefone: (11) 1234-5678</p>
                                     <p>Email: contato@sualanchonete.com</p>
                                     <p>Endereço: Rua dos Lanches, 123, São Paulo - SP</p>
                                 </div>
-                        
+
                                 <!-- Horário de funcionamento -->
                                 <div class="footer-horario">
                                     <h4>Horário de Funcionamento</h4>
@@ -97,16 +86,17 @@
                                 </div>
                             </div>
 
-                                
-                            
+
+
 
 
 
                         </footer>
-                    
+
 
     <script src="menu.js"></script>
     <script src="carrinho.js"></script>
-    
+    <script src="pratoDoDia.js"></script>
+
 </body>
 </html>
