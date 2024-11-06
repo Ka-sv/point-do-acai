@@ -4,12 +4,17 @@ function menuOnClick() {
     document.getElementById("menu-bg").classList.toggle("change-bg");
   }
 
-  function rolarParaContato() {
-    const contatoSection = document.getElementById('contato');
-    contatoSection.scrollIntoView({ behavior: 'smooth' });
+  // menu-routes.js
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 
-function rolarParaCardapio() {
-  const cardapioSection = document.getElementById('cardapio');
-  cardapioSection.scrollIntoView({ behavior: 'smooth' });
-}
+// Adiciona o event listener quando o DOM estiver completamente carregado
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("menu-button").addEventListener("click", menuOnClick);
+});
+
+
+  

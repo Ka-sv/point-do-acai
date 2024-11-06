@@ -1,21 +1,22 @@
+// Importações principais
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
+require('dotenv').config();
 
-// Middleware para interpretar JSON nas requisições
+// Middleware para interpretar JSON
 app.use(express.json());
 
-// Conecta ao banco de dados MongoDB
-mongoose.connect('mongodb://localhost:27017/cardapioDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+// Conexão com o MongoDB usando a URI do arquivo .env
+mongoose.connect(process.env.MONGO_URI, {
+    
 })
-.then(() => console.log('Conectado ao MongoDB'))
-.catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
+.then(() => console.log('Conectado ao MongoDB Atlas'))
+.catch((err) => console.error('Erro ao conectar ao MongoDB Atlas:', err));
 
 // Importa as rotas do menu
-const menuRoutes = require('./routes/menu');
+const menuRoutes = require('./routes/menu-routes');
 app.use('/api/menu', menuRoutes);
 
 // Middleware de tratamento de erros
