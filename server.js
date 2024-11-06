@@ -19,6 +19,12 @@ mongoose.connect(process.env.MONGO_URI, {
 const menuRoutes = require('./routes/menu-routes');
 app.use('/api/menu', menuRoutes);
 
+
+app.get('/', (req, res) => {
+    res.send('Bem-vindo ao servidor!');
+});
+
+
 // Middleware de tratamento de erros
 app.use((err, req, res, next) => {
     console.error(err.stack);
@@ -29,3 +35,4 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
