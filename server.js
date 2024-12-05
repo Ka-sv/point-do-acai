@@ -1,38 +1,43 @@
-// Importações principais
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+// Configuração do dotenv
+dotenv.config();
+
 const app = express();
 const port = 3000;
-require('dotenv').config();
+
+// Log da variável de ambiente
+console.log('MONGO_URI:', process.env.MONGO_URI);
 
 // Middleware para interpretar JSON
 app.use(express.json());
 
-// Conexão com o MongoDB usando a URI do arquivo .env
-mongoose.connect(process.env.MONGO_URI, {
-    
-})
-.then(() => console.log('Conectado ao MongoDB Atlas'))
-.catch((err) => console.error('Erro ao conectar ao MongoDB Atlas:', err));
+// Configurar debug do Mongoose
+mongoose.set('debug', true);
 
-// Importa as rotas do menu
+// Conexão com o MongoDB
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => {
+        console.log('Conexão bem-sucedida ao MongoDB Atlas');
+    })
+    .catch(err => {
+        console.error('Erro ao conectar ao MongoDB:', err.message);
+        process.exit(1);
+    });
+
+
+// Importação e uso das rotas do menu
 const menuRoutes = require('./routes/menu-routes');
 app.use('/api/menu', menuRoutes);
 
-
+// Rota raiz
 app.get('/', (req, res) => {
-    res.send('Bem-vindo ao servidor!');
+    res.send('Bem-vindo ao servidor do cardápio!');
 });
 
-
-// Middleware de tratamento de erros
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send({ message: 'Ocorreu um erro no servidor!' });
-});
-
-// Inicia o servidor na porta especificada
+// Inicia o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
-
