@@ -9,6 +9,11 @@ const app = express();
 const port = 3000;
 
 // Log da variável de ambiente
+if (!process.env.MONGO_URI) {
+    console.error('A variável MONGO_URI não está definida no arquivo .env');
+    process.exit(1);
+}
+
 console.log('MONGO_URI:', process.env.MONGO_URI);
 
 // Middleware para interpretar JSON
@@ -18,15 +23,17 @@ app.use(express.json());
 mongoose.set('debug', true);
 
 // Conexão com o MongoDB
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {
+    ssl: true, // Habilita SSL
+    tlsAllowInvalidCertificates: true, // Aceita certificados inválidos
+})
     .then(() => {
-        console.log('Conexão bem-sucedida ao MongoDB Atlas');
+        console.log('Conexão bem-sucedida ao MongoDB Atlas via Mongoose');
     })
     .catch(err => {
-        console.error('Erro ao conectar ao MongoDB:', err.message);
-        process.exit(1);
+        console.error('Erro ao conectar com Mongoose:', err.message);
+        process.exit(1); // Finaliza o processo caso a conexão falhe
     });
-
 
 // Importação e uso das rotas do menu
 const menuRoutes = require('./routes/menu-routes');
